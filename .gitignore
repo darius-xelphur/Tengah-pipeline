@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# GCP credentials - NEVER commit this
+gcp-key.json
+
+# Environment variables
+.env
+
+# Virtual environment
+venv/
