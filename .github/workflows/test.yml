@@ -1,0 +1,25 @@
+# The name displayed in the GitHub Actions tab
+name: GitHub Actions Demo
+
+# The event that triggers the workflow automatically
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# The automation execution blueprint
+jobs:
+  build-and-test:
+    # The operating system environment for the virtual runner
+    runs-on: ubuntu-latest
+
+    # The sequential steps to execute inside the runner
+    steps:
+      # Step 1: Downloads a copy of your code into the runner
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      # Step 2: Runs a single shell command
+      - name: Run a one-line script
+        run: echo "Hello, world! Your first GitHub Action works perfectly."
