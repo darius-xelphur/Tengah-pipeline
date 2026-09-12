@@ -1,16 +1,16 @@
-import requests
-import pandas as pd
+import requests # type: ignore
+import pandas as pd # type: ignore
 import time
 import io
 import os
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 from google.cloud import bigquery
-from google.oauth2 import service_account
+from google.oauth2 import service_account # type: ignore
 
 # ── Config ────────────────────────────────────────────────────────────────────
 load_dotenv()
 
-API_KEY    = os.getenv("v2:8d36d82c87ddd3095033cd58359b322759224858aba7caacd3c64ef42ad045e1:827-0ibLUQW9-3rFhX7wPW-HBkRc3o5o")
+API_KEY    = os.getenv("DATA_GOV_API_KEY")
 DATASET_ID = "d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
 BASE_URL   = "https://api-open.data.gov.sg/v1/public/api/datasets"
 PROJECT_ID = "tengah-analytics"
